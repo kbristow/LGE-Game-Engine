@@ -61,7 +61,7 @@ update
 Usage
 ==============
 The engine needs to be used by starting a new libgdx project as outlined on their own website and then importing the
-Engine structures you need. An example project can be seen here: TODO upload game example to github
+Engine structures you need. An example project can be seen here: https://github.com/kbristow/PlatformSoldier
 
 
 Spine
