@@ -24,39 +24,40 @@ Level      - The level objects contain multiple GameSprites and GameObjects. The
             
 Logic Overview
 ===============
-creation
+###creation
 
-    Each GameObject, GameSprite and Level have an onCreate function where initialization logic should be placed, e.g,
-    location, initial speed, direction etc.
+Each GameObject, GameSprite and Level have an onCreate function where initialization logic should be placed, e.g,
+location, initial speed, direction etc.
 draw
 
-    Each GameSprite, GameObject and Level have a draw function which can be viewed to see how the drawing of them
-    is handled. Level draw will call the draw function for each GameObject and each GameSprite not attached to a
-    GameObject. Each GameObject then calls the draw function for each GameSprite attached to it. Each GameSprite
-    will then draw the current frame of its texture at its current location. The draw functionality is accessed
-    through an overridable onDraw function.
-update
+Each GameSprite, GameObject and Level have a draw function which can be viewed to see how the drawing of them
+is handled. Level draw will call the draw function for each GameObject and each GameSprite not attached to a
+GameObject. Each GameObject then calls the draw function for each GameSprite attached to it. Each GameSprite
+will then draw the current frame of its texture at its current location. The draw functionality is accessed
+through an overridable onDraw function.
 
-    The GameObject logic works in exactly the same way as the draw logic but is accessed through a number of
-    overridable methods. These methods are preStep, onStep and postStep. They are called in the following order 
-    with other built in logic (Called from the Level object holding these objects):
+###update
+
+The GameObject logic works in exactly the same way as the draw logic but is accessed through a number of
+overridable methods. These methods are preStep, onStep and postStep. They are called in the following order 
+with other built in logic (Called from the Level object holding these objects):
     
     
-        preStep
+####preStep
+
+Kinematics are then updated for the GameObject
+
+####onStep
+
+Changes in position, velocity, rotation and scale are passed down to the current GameSprite that is being used
+and the GameSprite update method is called.
+
+####postStep
         
-        Kinematics are then updated for the GameObject
-        
-        onStep
-        
-        Changes in position, velocity, rotation and scale are passed down to the current GameSprite that is being used
-          and the GameSprite update method is called.
-          
-        postStep
-        
-    For the GameSprite the update logic is not accessible/overiddable.
-    
-    All GameObject updates are called before GameSprites that are not contained in a GameObject.
-    
+For the GameSprite the update logic is not accessible/overiddable.
+
+All GameObject updates are called before GameSprites that are not contained in a GameObject.
+
 
 Usage
 ==============
