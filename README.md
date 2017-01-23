@@ -1,6 +1,6 @@
 LGE-Game-Engine
 ===============
-A 2D Game Engine created using the LibGDX framework. Still a work in progress.
+A 2D Game Engine created using the LibGDX framework. A project done for learning purposes and entertainment.
 
 
 Requirements
@@ -10,7 +10,7 @@ Requires Eclipse with ADT plugin for use.
 
 Overview
 ===============
-The game engine works based on 3 structures which should be extended to specify necessary game logic. These
+The highest level architecture of the system is inspired by the desing of GameMaker. The game engine works based on 3 structures which should be extended to specify necessary game logic. These
 structures are:
 
 GameSprite - Controls drawing textures, animations and collisions between objects (collision mask usage)
@@ -68,4 +68,8 @@ Engine structures you need. An example project can be seen here: https://github.
 Spine
 ==============
 The engine has some rudimentary support for spine animations. See the game example for more information.
-    
+ 
+Note
+==============
+
+This is out of date with libgdx and spine. It is not maintained nor will it be developed further. It was done for entertainment and as a learning experience which will be kept up on GitHub for reference purposes.
